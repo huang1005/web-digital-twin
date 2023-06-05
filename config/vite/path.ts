@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 
 const ROOT = path.resolve(__dirname, '../../')
 const ASSETS = path.resolve(ROOT, './asserts')
@@ -11,5 +11,5 @@ export const PATHS = {
   PACKAGRS,
   ASSETS,
   digit,
-  twin
+  twin,
 }

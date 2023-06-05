@@ -3,14 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "fix": "eslint ./**/*.{vue,ts} --fix",
+    "twin": "pnpm -F web-twin dev",
+    "digit": "pnpm -F web-digit dev",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
-    "test:unit": "vitest",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "test": "vitest"
   },
   "dependencies": {
     "config": "workspace:*",
