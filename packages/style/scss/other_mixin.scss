@@ -1,0 +1,47 @@
+@use 'function' as *;
+
+@mixin vd {
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :deep() {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+  &::input-placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+  
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  &:input-placeholder {
+    @content;
+  }
+}
+
+@mixin flex($j, $a, $d: false, $w: false) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+
+  @if  $d {
+    flex-direction: $d;
+  }
+
+  @if  $w {
+    flex-wrap: $w;
+  }
+}
+
+// reset 
+@mixin reset-lib-css-var($resetMap, $lib:el) {
+  @each $module, $map in $resetMap {
+    @each $attribute, $value in $map {
+      #{--#{$lib}-#{$module}-#{$attribute}}: $value;
+    }
+  }
+}

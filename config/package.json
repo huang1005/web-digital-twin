@@ -1,0 +1,10 @@
+{
+    "name": "config",
+    "private": true,
+    "exports": {
+        "./vite": {
+            "types": "./vite/index.ts",
+            "import": "./vite/index.ts"
+        }
+    }
+}

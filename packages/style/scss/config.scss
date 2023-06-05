@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$global-lib: '' !default;
+$namespace: "" !default;
+$common-separator: '-' !default;
+$element-separator: "__";
+$modifier-separator: "--";
+$state-prefix: "is-";
+
+@mixin config($map) {
+  @if map.has-key($map, namespace) {
+    $namespace: map.get($map, namespace) !global;
+  }
+
+  @if map.has-key($map, global-lib) {
+    $global-lib: map.get($map, global-lib) !global;
+  }
+}

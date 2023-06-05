@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "../../",
+    "baseUrl": ".",
+    "paths": {
+      "@digital/*": [
+        "./src/*"
+      ],
+      "@root/digital/*": [
+        "./*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "../web-twin"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "style",
+  "private": true,
+  "exports": {
+    "./scss": {
+      "import": "./scss/index.scss",
+      "require": "./scss/index.scss"
+    },
+    "./*": "./*"
+  }
+}
